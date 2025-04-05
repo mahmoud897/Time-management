@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time Management - Interactive Data Visualizations</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Time Management</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="science.html">Science</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="frameworks.html">Frameworks</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="strategies.html">Strategies</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="tools.html">Tools</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="case-studies.html">Case Studies</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="future.html">Future</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="resources.html">Resources</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="visualizations.html">Visualizations</a>
+                    </li>
+                </ul>
+
+                <!-- Search Form -->
+                <div class="search-container ms-3 d-none d-lg-block">
+                    <input type="text" id="search-input" class="form-control form-control-sm" placeholder="Search...">
+                    <div id="search-results" class="shadow"></div>
+                </div>
+
+                <!-- Dark Mode Toggle -->
+                <div class="form-check form-switch ms-lg-3 ms-2">
+                    <input class="form-check-input" type="checkbox" id="dark-mode-toggle">
+                    <label class="form-check-label text-white" for="dark-mode-toggle">
+                        <i class="fas fa-moon"></i>
+                    </label>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="bg-primary text-white text-center py-5">
+        <div class="container">
+            <h1 class="display-4" data-aos="fade-down">Interactive Data Visualizations</h1>
+            <p class="lead" data-aos="fade-down" data-aos-delay="100">Explore time management concepts through dynamic charts and visual representations</p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container py-5">
+        <div class="row mb-5">
+            <div class="col-lg-8 mx-auto">
+                <section id="introduction" class="mb-5">
+                    <h2 data-aos="fade-up">Understanding Time Management Through Data</h2>
+                    <p data-aos="fade-up" data-aos-delay="100">Data visualizations help us understand complex information at a glance, revealing patterns and insights that might be difficult to grasp from text alone. This page presents interactive visualizations of key time management concepts, research findings, and comparative analyses to enhance your understanding of effective time management practices.</p>
+                    <p data-aos="fade-up" data-aos-delay="150">Each visualization is interactive—hover over elements to see detailed information, and use the controls to explore different aspects of the data. These visual representations complement the detailed content throughout the site, providing a more intuitive way to grasp important concepts.</p>
+                </section>
+            </div>
+        </div>
+
+        <!-- Meta-Analysis Results Chart -->
+        <section class="mb-5 py-4 bg-light rounded" data-aos="fade-up">
+            <div class="container">
+                <h2 class="text-center mb-4">Research Evidence: Meta-Analysis Results</h2>
+                <p class="text-center mb-4">This chart shows the correlation between time management practices and various outcomes based on a comprehensive meta-analysis of research studies.</p>
+                <div class="row">
+                    <div class="col-lg-8 mx-auto">
+                        <div class="card shadow">
+                            <div class="card-body">
+                                <div class="chart-container" style="height: 400px;">
+                                    <canvas id="meta-analysis-chart"></canvas>
+                                </div>
+                                <div class="mt-4 small">
+                                    <h6>Key Insights:</h6>
+                                    <ul>
+                                        <li>Strongest positive correlation with Wellbeing (0.43)</li>
+                                        <li>Moderate positive correlation with Academic Achievement (0.33)</li>
+                                        <li>Modest positive correlation with Job Performance (0.25)</li>
+                                        <li>Negatively correlated with Distress (-0.28), indicating stress reduction</li>
+                                    </ul>
+                                    <p><strong>Source:</strong> Adapted from Aeon, B., & Aguinis, H. (2017, 2021). Meta-analyses on Time Management.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Eisenhower Matrix Interactive -->
+        <section class="mb-5 py-4 rounded" data-aos="fade-up">
+            <div class="container">
+                <h2 class="text-center mb-4">Interactive Eisenhower Matrix</h2>
+                <p class="text-center mb-4">Explore the Eisenhower Matrix, a powerful framework for prioritizing tasks based on importance and urgency.</p>
+                <div class="row">
+                    <div class="col-lg-10 mx-auto">
+                        <div class="eisenhower-matrix">
+                            <div class="eisenhower-quadrant quadrant-urgent-important" data-aos="zoom-in" data-aos-delay="100">
+                                <h5>Urgent & Important (DO)</h5>
+                                <p class="small">Tasks requiring immediate attention with high impact.</p>
+                                <ul class="small"><li>Crises, Pressing problems, Deadlines</li></ul>
+                                <span class="badge bg-danger">High Stress</span> <span class="badge bg-warning text-dark">Reactive</span>
+                            </div>
+                            <div class="eisenhower-quadrant quadrant-not-urgent-important" data-aos="zoom-in" data-aos-delay="150">
+                                <h5>Not Urgent & Important (SCHEDULE)</h5>
+                                <p class="small">Tasks contributing to long-term goals.</p>
+                                <ul class="small"><li>Planning, Development, Relationships</li></ul>
+                                <span class="badge bg-success">High Value</span> <span class="badge bg-info text-dark">Proactive</span>
+                            </div>
+                            <div class="eisenhower-quadrant quadrant-urgent-not-important" data-aos="zoom-in" data-aos-delay="200">
+                                <h5>Urgent & Not Important (DELEGATE)</h5>
+                                <p class="small">Tasks needing quick action but low goal impact.</p>
+                                <ul class="small"><li>Some calls/emails, Interruptions</li></ul>
+                                <span class="badge bg-warning text-dark">Interruptions</span> <span class="badge bg-secondary">Low Impact</span>
+                            </div>
+                            <div class="eisenhower-quadrant quadrant-not-urgent-not-important" data-aos="zoom-in" data-aos-delay="250">
+                                <h5>Not Urgent & Not Important (ELIMINATE)</h5>
+                                <p class="small">Tasks with low impact and no urgency.</p>
+                                <ul class="small"><li>Time wasters, Excessive browsing</li></ul>
+                                <span class="badge bg-secondary">Low Value</span> <span class="badge bg-info-subtle text-dark-emphasis">Distractions</span>
+                            </div>
+                        </div>
+                        <div class="card mt-4" data-aos="fade-up" data-aos-delay="300">
+                            <div class="card-body small">
+                                <h6>Implementation Tips:</h6>
+                                <ol>
+                                    <li>Categorize current tasks into these quadrants.</li>
+                                    <li>Aim to spend most time in "Important & Not Urgent".</li>
+                                    <li>Reduce time spent reacting in "Urgent & Important".</li>
+                                    <li>Delegate or automate "Urgent & Not Important" tasks.</li>
+                                    <li>Minimize or eliminate "Not Important & Not Urgent" activities.</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Time Management Evolution Chart -->
+        <section class="mb-5 py-4 bg-light rounded" data-aos="fade-up">
+            <div class="container">
+                <h2 class="text-center mb-4">Historical Evolution of Time Management</h2>
+                <p class="text-center mb-4">This chart illustrates how time management focus has evolved, from pure efficiency to effectiveness and wellbeing integration.</p>
+                <div class="row">
+                    <div class="col-lg-8 mx-auto">
+                        <div class="card shadow">
+                            <div class="card-body">
+                                <div class="chart-container" style="height: 400px;">
+                                    <canvas id="evolution-chart"></canvas>
+                                </div>
+                                <div class="mt-4 small">
+                                    <h6>Key Trends:</h6>
+                                    <ul>
+                                        <li><strong>Efficiency Focus (1950s-70s):</strong> Maximizing output.</li>
+                                        <li><strong>Effectiveness Shift (1980s-00s):</strong> Doing the *right* things.</li>
+                                        <li><strong>Wellbeing Integration (2000s+):</strong> Incorporating balance, stress reduction, fulfillment.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tools Comparison Chart -->
+        <section class="mb-5 py-4 rounded" data-aos="fade-up">
+            <div class="container">
+                <h2 class="text-center mb-4">Digital vs. Analog Tools Comparison</h2>
+                <p class="text-center mb-4">This radar chart compares the strengths and weaknesses of digital and analog time management tools across multiple dimensions.</p>
+                <div class="row">
+                    <div class="col-lg-8 mx-auto">
+                        <div class="card shadow">
+                            <div class="card-body">
+                                <div class="chart-container" style="height: 450px;">
+                                    <canvas id="tools-comparison-chart"></canvas>
+                                </div>
+                                <div class="mt-4 small">
+                                     <h6>Comparison Insights:</h6>
+                                      <p>Digital tools excel in feature richness, cross-platform access, and integration, while analog tools often score higher on ease of use, customization potential (e.g., BuJo), and cost-effectiveness. Choose based on your workflow and preferences.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- START: Three.js Tool Visualization Section -->
+        <section id="tool-visualization-3d" class="mb-5 py-4 bg-light rounded" data-aos="fade-up">
+            <div class="container">
+                <h2 class="text-center mb-4" data-aos="fade-up">3D Tool Category Visualization</h2>
+                <p class="text-center mb-4" data-aos="fade-up" data-aos-delay="100">Interact with the 3D representation of different time management tool categories. Drag to rotate, scroll to zoom.</p>
+                <div class="row">
+                    <div class="col-lg-10 mx-auto">
+                        <div class="card shadow" data-aos="zoom-in" data-aos-delay="200">
+                            <div class="card-body">
+                                <div id="threejs-container" style="width: 100%; height: 500px; position: relative; background-color: #eee;">
+                                    <!-- Loading Indicator (Optional) -->
+                                    <div id="loading-indicator" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: #6c757d;">Loading 3D View...</div>
+                                    <!-- Canvas will be appended here by JS -->
+                                </div>
+                                <div id="tooltip-3d" style="position: absolute; display: none; background: rgba(0,0,0,0.7); color: white; padding: 5px 10px; border-radius: 4px; pointer-events: none; font-size: 12px; z-index: 10;"></div>
+                            </div>
+                        </div>
+                        <div class="mt-3 text-center small text-muted" data-aos="fade-up" data-aos-delay="250">
+                            Represents categories: Task Management (Cube), Calendar (Sphere), Focus (Cone), Project (Pyramid), Note Taking (Cylinder). Hover for labels.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- END: Three.js Tool Visualization Section -->
+
+    </main>
+
+    <!-- Footer -->
+     <footer class="bg-dark text-white py-4 mt-5">
+        <div class="container">
+            <div class="row">
+                 <div class="col-md-6">
+                    <h5>Time Management: A Comprehensive Guide</h5>
+                    <p>Based on extensive research and analysis of academic studies, expert knowledge, and real-world applications.</p>
+                </div>
+                <div class="col-md-3">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-white">Home</a></li>
+                        <li><a href="science.html" class="text-white">Science</a></li>
+                        <li><a href="frameworks.html" class="text-white">Frameworks</a></li>
+                        <li><a href="strategies.html" class="text-white">Strategies</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5>More</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="tools.html" class="text-white">Tools</a></li>
+                        <li><a href="case-studies.html" class="text-white">Case Studies</a></li>
+                        <li><a href="future.html" class="text-white">Future</a></li>
+                        <li><a href="resources.html" class="text-white">Resources</a></li>
+                        <li><a href="visualizations.html" class="text-white">Visualizations</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <div class="text-center">
+                 <p>&copy; 2025 Research by Mahmoud Allam. Website structure by Manus AI. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+     <!-- Back to Top Button -->
+    <button id="back-to-top" class="btn btn-primary position-fixed bottom-0 end-0 m-3" style="display: none;">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+     <!-- Three.js Import Map and Modules (Place BEFORE other scripts that might use them) -->
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "https://unpkg.com/three@0.164.1/build/three.module.js",
+                "three/addons/": "https://unpkg.com/three@0.164.1/examples/jsm/"
+            }
+        }
+    </script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/main.js"></script> <!-- Contains Chart.js and Three.js initialization -->
+
+</body>
+</html>
